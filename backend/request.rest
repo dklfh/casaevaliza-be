@@ -6,18 +6,7 @@ GET  http://localhost:5000/users/66825a0c873253329459fad8
 
 ###
 
-POST http://localhost:5000/users
-Content-Type: application/json
-
-{
-    "name":"ambatukam",
-    "email":"yande",
-    "gender":"HELIKOPTER"
-}
-
-###
-
-PATCH  http://localhost:5000/users/66825a0c873253329459fad8
+POST  http://localhost:5000/users
 Content-Type: application/json
 
 {
@@ -32,7 +21,29 @@ DELETE http://localhost:5000/users/66825a0c873253329459fad8
 
 ###
 
-GET http://localhost:5000//books
+GET http://localhost:5000/pesan
 
 
+###
+POST  http://localhost:5000/pegawai
+Content-Type: application/json
 
+{
+    "name":"ambatukam",
+    "jabatan":"ceo",
+    "quete":"makan tidur makan"
+}
+
+###
+POST  http://localhost:5000/pesan
+Content-Type: application/json
+
+{
+    "name":"ambatukam",
+    "email":"ceo",
+    "alamat":"makan tidur makan",
+    "asalnegara":"makan tidur makan",
+    "tipekamar":"makan tidur makan"
+
+
+}
