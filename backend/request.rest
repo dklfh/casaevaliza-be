@@ -6,12 +6,12 @@ GET  http://localhost:5000/users/66825a0c873253329459fad8
 
 ###
 
-POST  http://localhost:5000/users
+PATCH  http://localhost:5000/users/668622a9bf838fae12ccdb16
 Content-Type: application/json
 
 {
     "name":"ambatukam",
-    "email":"yande",
+    "email":"yandexsczczcc",
     "gender":"male"
 }
 
@@ -25,25 +25,19 @@ GET http://localhost:5000/pesan
 
 
 ###
-POST  http://localhost:5000/pegawai
+POST  http://localhost:5000/users
 Content-Type: application/json
 
 {
     "name":"ambatukam",
-    "jabatan":"ceo",
-    "quete":"makan tidur makan"
+    "email":"yandexsczczcc",
+    "gender":"male"
 }
 
 ###
-POST  http://localhost:5000/pesan
+POST http://localhost:5000/home
 Content-Type: application/json
 
 {
-    "name":"ambatukam",
-    "email":"ceo",
-    "alamat":"makan tidur makan",
-    "asalnegara":"makan tidur makan",
-    "tipekamar":"makan tidur makan"
-
-
+    "text":"Casa grsdssgdssgsEvaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
 }

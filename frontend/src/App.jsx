@@ -24,6 +24,7 @@ import Sitemap from './pages/website-pages/sitemap'
 import Spa from './pages/website-pages/spa'
 import Suite from './pages/website-pages/suite'
 import Swimming from './pages/website-pages/swimming'
+import Test from './UserList'
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
           <Route path='/spa' element = {<Spa/>}></Route>
           <Route path='/suite' element = {<Suite/>}></Route>
           <Route path='/swimming' element = {<Swimming/>}></Route>
+          <Route path='/tes' element = {<Test/>}></Route>
         </Routes>
       </Router>
     </>

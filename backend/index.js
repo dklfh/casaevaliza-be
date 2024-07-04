@@ -4,6 +4,7 @@ import cors from "cors";
 import UserRoute from "./routes/UserRoutes.js";
 import BookingRoute from "./routes/BookingRoutes.js";
 import PegawaiRoute from "./routes/PegawaiRoute.js"
+import TexthomeRoute from "./routes/TexthomeRoute.js"
 
 const app = express();
 mongoose.connect('mongodb://localhost:27017/fullstack_db',{
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(UserRoute);
 app.use(BookingRoute);
 app.use(PegawaiRoute)
+app.use(TexthomeRoute)
 
 
 
