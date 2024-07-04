@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../component/website/navbar/navbar'
 import Footer from '../../component/website/footer/footer'
+import Sidebar from '../../component/cms/sidebar'
 
-function Location() {
+function Locationcms() {
   return (
     <div>
-      <Navbar/>
+      <Sidebar/>
       <h1>Location</h1>
-      <Footer/>
     </div>
   )
 }
 
-export default Location
+export default Locationcms

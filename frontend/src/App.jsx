@@ -24,6 +24,13 @@ import Sitemap from './pages/website-pages/sitemap'
 import Spa from './pages/website-pages/spa'
 import Suite from './pages/website-pages/suite'
 import Swimming from './pages/website-pages/swimming'
+import Admincms from './pages/cms-pages/cms-admin'
+import Aboutcms from './pages/cms-pages/cms-about'
+import Accocms from './pages/cms-pages/cms-acco'
+import Bedroomcms from './pages/cms-pages/cms-bedroom'
+import Bookcms from './pages/cms-pages/cms-book'
+import Contactcms from './pages/cms-pages/cms-contact'
+import Eventcms from './pages/cms-pages/cms-event'
 
 const App = () => {
   return (
@@ -57,13 +64,13 @@ const App = () => {
           <Route path='/swimming' element = {<Swimming/>}></Route>
 
           {/* CMS */}
-          <Route path='/admin' element = {<Admin/>}></Route>
-          <Route path='/cms-about' element = {<About/>}></Route>
-          <Route path='/cms-accommodation' element = {<Acco/>}></Route>
-          <Route path='/cms-bedroom' element = {<Bedroom/>}></Route>
-          <Route path='/cms-book' element = {<Book/>}></Route>
-          <Route path='/cms-contact' element = {<Contact/>}></Route>
-          <Route path='/cms-event' element = {<Event/>}></Route>
+          <Route path='/admin' element = {<Admincms/>}></Route>
+          <Route path='/cms-about' element = {<Aboutcms/>}></Route>
+          <Route path='/cms-accommodation' element = {<Accocms/>}></Route>
+          <Route path='/cms-bedroom' element = {<Bedroomcms/>}></Route>
+          <Route path='/cms-book' element = {<Bookcms/>}></Route>
+          <Route path='/cms-contact' element = {<Contactcms/>}></Route>
+          <Route path='/cms-event' element = {<Eventcms/>}></Route>
           <Route path='/cms-facilities' element = {<Facilities/>}></Route>
           <Route path='/cms-food' element = {<Food/>}></Route>
           <Route path='/cms-france' element = {<France/>}></Route>

@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from '../../component/website/navbar/navbar'
 import Footer from '../../component/website/footer/footer'
+import Sidebar from '../../component/cms/sidebar'
 
-function Swimming() {
+
+function Swimmingcms() {
   return (
     <div>
-      <Navbar/>
+      <Sidebar/>
       <h1>Swimming</h1>
-      <Footer/>
     </div>
   )
 }
 
-export default Swimming
+export default Swimmingcms
