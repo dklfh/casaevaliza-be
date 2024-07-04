@@ -1,22 +1,22 @@
 import React from 'react'
-import flag from './../../assets/images/navbar/french.jpg'
-import logo from './../../assets/images/navbar/casa-evaliza.jpg';
+import flag from './../../../assets/images/navbar/french.jpg'
+import logo from './../../../assets/images/navbar/casa-evaliza.jpg'
 
-function navbar() {
+function Navbar() {
     return (
         <div>
-            <nav className="shadow-lg">
+            <nav className="shadow-lg ">
                 <div className="mx-28 px-4 hidden xl:block">
                     <div className="flex flex-col">
                         <div className="pt-8 flex gap-20 items-center">
                             <hr className="w-full h-px bg-regular border-0 rounded grow" />
                             <a href="langfrance.html" className="border rounded-sm border-regular p-0.5">
-                                <img src="image/IMG-20240618-WA0004.jpg" className="w-7" alt="" />
+                                <img src={flag} className="w-7" alt="" />
                             </a>
                         </div>
                         <div className="flex items-center justify-between mb-1.5">
                             <a href="index.html">
-                                <img src="image/IMG-20240618-WA0005.jpg" className="w-52" alt="" />
+                                <img src={logo} className="w-52" alt="" />
                             </a>
                             <div>
                                 <ul className="flex">
@@ -90,4 +90,4 @@ function navbar() {
     )
 }
 
-export default navbar
+export default Navbar
