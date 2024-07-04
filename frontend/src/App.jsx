@@ -24,12 +24,14 @@ import Sitemap from './pages/website-pages/sitemap'
 import Spa from './pages/website-pages/spa'
 import Suite from './pages/website-pages/suite'
 import Swimming from './pages/website-pages/swimming'
+import Admin from './pages/cms-pages/cms-admin'
 
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
+          {/* Website */}
           <Route path='/' element = {<Home/>}></Route>
           <Route path='/about' element = {<About/>}></Route>
           <Route path='/accommodation' element = {<Acco/>}></Route>
@@ -54,6 +56,32 @@ const App = () => {
           <Route path='/spa' element = {<Spa/>}></Route>
           <Route path='/suite' element = {<Suite/>}></Route>
           <Route path='/swimming' element = {<Swimming/>}></Route>
+
+          {/* CMS */}
+          <Route path='/admin' element = {<Admin/>}></Route>
+          <Route path='/cms-about' element = {<About/>}></Route>
+          <Route path='/cms-accommodation' element = {<Acco/>}></Route>
+          <Route path='/cms-bedroom' element = {<Bedroom/>}></Route>
+          <Route path='/cms-book' element = {<Book/>}></Route>
+          <Route path='/cms-contact' element = {<Contact/>}></Route>
+          <Route path='/cms-event' element = {<Event/>}></Route>
+          <Route path='/cms-facilities' element = {<Facilities/>}></Route>
+          <Route path='/cms-food' element = {<Food/>}></Route>
+          <Route path='/cms-france' element = {<France/>}></Route>
+          <Route path='/cms-gallery' element = {<Gallery/>}></Route>
+          <Route path='/cms-gym' element = {<Gym/>}></Route>
+          <Route path='/cms-kitchen' element = {<Kitchen/>}></Route>
+          <Route path='/cms-link' element = {<Link/>}></Route>
+          <Route path='/cms-living' element = {<Living/>}></Route>
+          <Route path='/cms-location' element = {<Location/>}></Route>
+          <Route path='/cms-media' element = {<Media/>}></Route>
+          <Route path='/cms-ourgallery' element = {<Ourgallery/>}></Route>
+          <Route path='/cms-press' element = {<Press/>}></Route>
+          <Route path='/cms-services' element = {<Services/>}></Route>
+          <Route path='/cms-sitemap' element = {<Sitemap/>}></Route>
+          <Route path='/cms-spa' element = {<Spa/>}></Route>
+          <Route path='/cms-suite' element = {<Suite/>}></Route>
+          <Route path='/cms-swimming' element = {<Swimming/>}></Route>
         </Routes>
       </Router>
     </>
