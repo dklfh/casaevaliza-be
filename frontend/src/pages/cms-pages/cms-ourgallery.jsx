@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../component/website/navbar/navbar'
 import Footer from '../../component/website/footer/footer'
+import Sidebar from '../../component/cms/sidebar'
 
-function Ourgallery() {
+function Ourgallerycms() {
   return (
     <div>
-      <Navbar/>
+      <Sidebar/>
       <h1>Our Gallery</h1>
-      <Footer/>
     </div>
   )
 }
 
-export default Ourgallery
+export default Ourgallerycms

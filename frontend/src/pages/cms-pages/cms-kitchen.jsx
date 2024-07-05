@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../component/website/navbar/navbar'
 import Footer from '../../component/website/footer/footer'
+import Sidebar from '../../component/cms/sidebar'
 
-function Kitchen() {
+function Kitchencms() {
   return (
     <div>
-      <Navbar/>
+      <Sidebar/>
       <h1>Kitchen</h1>
-      <Footer/>
     </div>
   )
 }
 
-export default Kitchen
+export default Kitchencms
