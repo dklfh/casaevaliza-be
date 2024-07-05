@@ -57,7 +57,7 @@ const App = () => {
           <Route path='/swimming' element = {<Swimming/>}></Route>
 
           {/* CMS */}
-          <Route path='/admin' element = {<Admin/>}></Route>
+          {/* <Route path='/admin' element = {<Admin/>}></Route>
           <Route path='/cms-about' element = {<About/>}></Route>
           <Route path='/cms-accommodation' element = {<Acco/>}></Route>
           <Route path='/cms-bedroom' element = {<Bedroom/>}></Route>
@@ -80,7 +80,7 @@ const App = () => {
           <Route path='/cms-sitemap' element = {<Sitemap/>}></Route>
           <Route path='/cms-spa' element = {<Spa/>}></Route>
           <Route path='/cms-suite' element = {<Suite/>}></Route>
-          <Route path='/cms-swimming' element = {<Swimming/>}></Route>
+          <Route path='/cms-swimming' element = {<Swimming/>}></Route> */}
         </Routes>
       </Router>
     </>
