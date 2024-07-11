@@ -1,0 +1,28 @@
+POST http://localhost:5000/home
+Content-Type: application/json
+
+{
+    "title": "Casa Evaliza",
+    "text": "Casa Evaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
+}
+
+###
+
+PATCH http://localhost:5000/home/668f411507ff964e88fcb650
+Content-Type: application/json
+
+{
+    "title": "Casa Evaliza",
+    "text": "Casa Evaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
+}
+
+###
+
+GET http://localhost:5000/home
+
+###
+
+GET http://localhost:5000/home/668f52e5200cd7d42eb89475
+
+###
+DELETE http://localhost:5000/home/668e76e55d33d52483203083

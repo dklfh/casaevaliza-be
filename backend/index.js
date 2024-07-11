@@ -7,10 +7,7 @@ import PegawaiRoute from "./routes/PegawaiRoute.js"
 import TexthomeRoute from "./routes/TexthomeRoute.js"
 
 const app = express();
-mongoose.connect('mongodb://localhost:27017/fullstack_db',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect('mongodb://localhost:27017/casaevaliza_db');
 
 const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
@@ -22,7 +19,5 @@ app.use(UserRoute);
 app.use(BookingRoute);
 app.use(PegawaiRoute)
 app.use(TexthomeRoute)
-
-
 
 app.listen(5000, ()=> console.log('Server up and running...'));

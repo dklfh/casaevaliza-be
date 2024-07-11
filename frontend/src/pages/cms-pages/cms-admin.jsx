@@ -7,6 +7,8 @@ import Hapus from '../../component/cms/hapus'
 import Add from '../../component/cms/add'
 import Tmptbutton from '../../component/cms/tmptbutton'
 import axios from "axios";
+import H2cms from '../../component/cms/h2cms'
+import Pcms from '../../component/cms/pcms'
 
 function Admincms() {
   const [text, setText] = useState([]);
@@ -32,8 +34,9 @@ function Admincms() {
           </Tmptbutton>
           <div>
             {text.map((item, index) => (
-              <div key={index}>
-                <p>{item.text}</p>
+              <div key={item.id || index}>
+                <H2cms text={item.title} />
+                <Pcms text={item.text} />
               </div>
             ))}
           </div>
