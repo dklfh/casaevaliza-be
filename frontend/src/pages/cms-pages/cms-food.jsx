@@ -1,11 +1,18 @@
 import React from 'react'
 import Sidebar from '../../component/cms/sidebar'
+import Layout from '../../component/cms/layout'
+import Divputih from '../../component/cms/divputih'
+import Edit from '../../component/cms/edit'
 
 function Foodcms() {
   return (
     <div>
       <Sidebar/>
-      <h1>Food</h1>
+      <Layout>
+        <Divputih>
+          <Edit/>
+        </Divputih>
+      </Layout>
     </div>
   )
 }

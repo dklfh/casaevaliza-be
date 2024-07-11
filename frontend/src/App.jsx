@@ -31,6 +31,24 @@ import Bedroomcms from './pages/cms-pages/cms-bedroom'
 import Bookcms from './pages/cms-pages/cms-book'
 import Contactcms from './pages/cms-pages/cms-contact'
 import Eventcms from './pages/cms-pages/cms-event'
+import Facilitiescms from './pages/cms-pages/cms-facilities'
+import Foodcms from './pages/cms-pages/cms-food'
+import Francecms from './pages/cms-pages/cms-france'
+import Gallerycms from './pages/cms-pages/cms-gallery'
+import Gymcms from './pages/cms-pages/cms-gym'
+import Kitchencms from './pages/cms-pages/cms-kitchen'
+import Linkcms from './pages/cms-pages/cms-link'
+import Livingcms from './pages/cms-pages/cms-living'
+import Locationcms from './pages/cms-pages/cms-location'
+import Mediacms from './pages/cms-pages/cms-media'
+import Ourgallerycms from './pages/cms-pages/cms-ourgallery'
+import Presscms from './pages/cms-pages/cms-press'
+import Servicescms from './pages/cms-pages/cms-services'
+import Sitemapcms from './pages/cms-pages/cms-sitemap'
+import Spacms from './pages/cms-pages/cms-spa'
+import Suitecms from './pages/cms-pages/cms-suite'
+import Swimmingcms from './pages/cms-pages/cms-swimming'
+import Halamanedit from './component/cms/halamanedit'
 
 const App = () => {
   return (
@@ -40,7 +58,7 @@ const App = () => {
           {/* Website */}
           <Route path='/' element = {<Home/>}></Route>
           <Route path='/about' element = {<About/>}></Route>
-          <Route path='/accommodation' element = {<Acco/>}></Route>
+          <Route path='/acco' element = {<Acco/>}></Route>
           <Route path='/bedroom' element = {<Bedroom/>}></Route>
           <Route path='/book' element = {<Book/>}></Route>
           <Route path='/contact' element = {<Contact/>}></Route>
@@ -64,30 +82,32 @@ const App = () => {
           <Route path='/swimming' element = {<Swimming/>}></Route>
 
           {/* CMS */}
-          <Route path='/admin' element = {<Admin/>}></Route>
-          <Route path='/cms-about' element = {<About/>}></Route>
-          <Route path='/cms-accommodation' element = {<Acco/>}></Route>
-          <Route path='/cms-bedroom' element = {<Bedroom/>}></Route>
-          <Route path='/cms-book' element = {<Book/>}></Route>
-          <Route path='/cms-contact' element = {<Contact/>}></Route>
-          <Route path='/cms-event' element = {<Event/>}></Route>
-          <Route path='/cms-facilities' element = {<Facilities/>}></Route>
-          <Route path='/cms-food' element = {<Food/>}></Route>
-          <Route path='/cms-france' element = {<France/>}></Route>
-          <Route path='/cms-gallery' element = {<Gallery/>}></Route>
-          <Route path='/cms-gym' element = {<Gym/>}></Route>
-          <Route path='/cms-kitchen' element = {<Kitchen/>}></Route>
-          <Route path='/cms-link' element = {<Link/>}></Route>
-          <Route path='/cms-living' element = {<Living/>}></Route>
-          <Route path='/cms-location' element = {<Location/>}></Route>
-          <Route path='/cms-media' element = {<Media/>}></Route>
-          <Route path='/cms-ourgallery' element = {<Ourgallery/>}></Route>
-          <Route path='/cms-press' element = {<Press/>}></Route>
-          <Route path='/cms-services' element = {<Services/>}></Route>
-          <Route path='/cms-sitemap' element = {<Sitemap/>}></Route>
-          <Route path='/cms-spa' element = {<Spa/>}></Route>
-          <Route path='/cms-suite' element = {<Suite/>}></Route>
-          <Route path='/cms-swimming' element = {<Swimming/>}></Route>
+          <Route path='/admin' element = {<Admincms/>}></Route>
+          <Route path='/cms-about' element = {<Aboutcms/>}></Route>
+          <Route path='/cms-acco' element = {<Accocms/>}></Route>
+          <Route path='/cms-bedroom' element = {<Bedroomcms/>}></Route>
+          <Route path='/cms-book' element = {<Bookcms/>}></Route>
+          <Route path='/cms-contact' element = {<Contactcms/>}></Route>
+          <Route path='/cms-event' element = {<Eventcms/>}></Route>
+          <Route path='/cms-facilities' element = {<Facilitiescms/>}></Route>
+          <Route path='/cms-food' element = {<Foodcms/>}></Route>
+          <Route path='/cms-france' element = {<Francecms/>}></Route>
+          <Route path='/cms-gallery' element = {<Gallerycms/>}></Route>
+          <Route path='/cms-gym' element = {<Gymcms/>}></Route>
+          <Route path='/cms-kitchen' element = {<Kitchencms/>}></Route>
+          <Route path='/cms-link' element = {<Linkcms/>}></Route>
+          <Route path='/cms-living' element = {<Livingcms/>}></Route>
+          <Route path='/cms-location' element = {<Locationcms/>}></Route>
+          <Route path='/cms-media' element = {<Mediacms/>}></Route>
+          <Route path='/cms-ourgallery' element = {<Ourgallerycms/>}></Route>
+          <Route path='/cms-press' element = {<Presscms/>}></Route>
+          <Route path='/cms-services' element = {<Servicescms/>}></Route>
+          <Route path='/cms-sitemap' element = {<Sitemapcms/>}></Route>
+          <Route path='/cms-spa' element = {<Spacms/>}></Route>
+          <Route path='/cms-suite' element = {<Suitecms/>}></Route>
+          <Route path='/cms-swimming' element = {<Swimmingcms/>}></Route>
+
+          <Route path='/edit/:username' element= {<Halamanedit/>}></Route>
         </Routes>
       </Router>
     </>
