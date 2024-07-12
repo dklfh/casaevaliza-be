@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../component/website/navbar/navbar'
 import Footer from '../../component/website/footer/footer'
 import Image from '../../component/website/layout/image'
@@ -16,17 +16,34 @@ import img3 from './../../assets/images/content/gallery3.png'
 import img4 from './../../assets/images/content/gallery4.png'
 import img5 from './../../assets/images/content/gallery5.png'
 import img6 from './../../assets/images/content/gallery6.png'
+import axios from 'axios'
 
 function Home() {
+  const [section1, setSection1] = useState({ title: ''});
+
+  useEffect(() => {
+    const fetchSection1 = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/home/6690a83ae9c88de95d9d926e');
+        console.log(response.data);
+        setSection1(response.data);
+      } catch (error) {
+        console.error('There was an error fetching the title data!', error);
+      }
+    };
+
+    fetchSection1();
+  }, []);
+
   return (
     <div>
       <Navbar />
       <Image />
       <Section>
         <Div>
-          <H2 text='Welcome To Casa Evaliza' />
+          <H2 text={section1.title} />
           <Divp>
-            <p>Casa Evaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant. One of the best villas in Bali, the best place for you to stay on vacation.</p>
+            <p>{section1.text}</p>
           </Divp>
 
           <div className='flex flex-col lg:flex-row'>
