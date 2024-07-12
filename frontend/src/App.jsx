@@ -107,7 +107,7 @@ const App = () => {
           <Route path='/cms-suite' element = {<Suitecms/>}></Route>
           <Route path='/cms-swimming' element = {<Swimmingcms/>}></Route>
 
-          <Route path='/edit/:username' element= {<Halamanedit/>}></Route>
+          <Route path='/edit/:endpoint/:_id' element = {<Halamanedit/>}></Route>
         </Routes>
       </Router>
     </>

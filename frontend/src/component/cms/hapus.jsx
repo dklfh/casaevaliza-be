@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Hapus() {
+function Hapus({ onDelete }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleDelete = () => {
-    // Logic untuk menghapus data di sini
-
-    // Menampilkan notifikasi
+  const handleDelete = async () => {
+    await onDelete();
     toast.success('Data successfully deleted!');
     setIsModalOpen(false);
   };
@@ -91,8 +89,6 @@ function Hapus() {
           </div>
         </div>
       )}
-
-      <ToastContainer />
     </div>
   );
 }

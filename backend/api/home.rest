@@ -2,16 +2,18 @@ POST http://localhost:5000/home
 Content-Type: application/json
 
 {
-    "title": "Casa Evaliza",
-    "text": "Casa Evaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
+    "name": "home section 2",
+    "title": "Casa Evaliza HJHKHJKHJ",
+    "text": "Casa Evs cated 250  ali'st coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
 }
 
 ###
 
-PATCH http://localhost:5000/home/668f411507ff964e88fcb650
+PATCH http://localhost:5000/home/668fdcde37fc55a2e012bce1
 Content-Type: application/json
 
 {
+    "name": "home section 1",
     "title": "Casa Evaliza",
     "text": "Casa Evaliza is a spacious Bali rental villa, located 250 metres from the beach in the up market Seminyak area on Bali's southwest coast and accessed through the same road which serves the Club at The Legian Hotel, and just minutes walk from the world famous Ku De Ta restaurant."
 }
@@ -22,7 +24,7 @@ GET http://localhost:5000/home
 
 ###
 
-GET http://localhost:5000/home/668f52e5200cd7d42eb89475
+GET http://localhost:5000/home/668f7b3eac4f0378cefff1f9
 
 ###
-DELETE http://localhost:5000/home/668e76e55d33d52483203083
+DELETE http://localhost:5000/home/668f7b3eac4f0378cefff1f9
