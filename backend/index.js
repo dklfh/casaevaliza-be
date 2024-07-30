@@ -15,6 +15,7 @@ db.once('open', () => console.log('Database Connected...'));
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("uploads"));
 app.use(UserRoute);
 app.use(BookingRoute);
 app.use(PegawaiRoute)

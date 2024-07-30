@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams, useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from './sidebar';
 import Layout from './layout';
@@ -14,8 +14,8 @@ import Header from './header';
 function Halamanedit() {
   const { endpoint, _id } = useParams();
   const navigate = useNavigate();
-  const location = useLocation();
   const [data, setData] = useState({ name: '', title: '', text: '' });
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +23,7 @@ function Halamanedit() {
       setData(response.data);
     };
     fetchData();
+    fetchImages();
   }, [endpoint, _id]);
 
   const handleChange = (field, value) => {
@@ -49,13 +50,49 @@ function Halamanedit() {
     }
   };
 
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/images');
+      const formattedImages = response.data.map(image => ({
+        src: `http://localhost:5000/${image.filename}`,
+        alt: image.filename
+      }));
+      setImages(formattedImages);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
+
+  const handleImageUpload = async (file) => {
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+      const response = await axios.post('http://localhost:5000/single', formData);
+      console.log(response.data.msg);
+      fetchImages(); // Panggil fungsi untuk memperbarui daftar gambar
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
+  };
+
+  const handleImageDelete = async (index) => {
+    const image = images[index];
+    try {
+      await axios.delete(`http://localhost:5000/images/${image.alt}`);
+      setImages(images.filter((_, i) => i !== index));
+    } catch (error) {
+      console.error('Failed to delete image:', error);
+    }
+  };
+
   return (
     <div>
       <Sidebar />
       <Layout>
-        <h1 className='font-semibold text-slate-800 uppercase mb-4 text-2xl tracking-wide text-center'>EDIT {data.name}</h1>
+        <h1 className='font-semibold text-slate-800 uppercase mb-4 text-2xl tracking-wide text-center'>EDIT TEXT {data.name}</h1>
         <Divputih>
-          <Header 
+          <Header
             label="Title"
             value={data.title}
             onChange={(e) => handleChange('title', e.target.value)}
@@ -63,7 +100,12 @@ function Halamanedit() {
           <br />
           <Texteditor label="Paragraf" defaultValue={data.text} onChange={(value) => handleChange('text', value)} />
           <br />
-          <Fileinput />
+          <Fileinput
+            onFileChange={(file) => console.log(file)}
+            onSubmit={handleImageUpload}
+            images={images}
+            onDelete={handleImageDelete}
+          />
           <br />
           <Tmptbutton>
             <Save onClick={updateText} />

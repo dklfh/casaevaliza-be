@@ -28,3 +28,6 @@ GET http://localhost:5000/home/668f7b3eac4f0378cefff1f9
 
 ###
 DELETE http://localhost:5000/home/668f7b3eac4f0378cefff1f9
+
+###
+GET http://localhost:5000/images

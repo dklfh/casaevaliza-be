@@ -49,6 +49,7 @@ import Spacms from './pages/cms-pages/cms-spa'
 import Suitecms from './pages/cms-pages/cms-suite'
 import Swimmingcms from './pages/cms-pages/cms-swimming'
 import Halamanedit from './component/cms/halamanedit'
+import Editimg from './component/cms/editimg'
 
 const App = () => {
   return (
@@ -108,6 +109,7 @@ const App = () => {
           <Route path='/cms-swimming' element = {<Swimmingcms/>}></Route>
 
           <Route path='/edit/:endpoint/:_id' element = {<Halamanedit/>}></Route>
+          <Route path='/editimage' element = {<Editimg/>}></Route>
         </Routes>
       </Router>
     </>

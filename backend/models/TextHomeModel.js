@@ -1,18 +1,33 @@
 import mongoose from "mongoose";
 
-const Texthome = mongoose.Schema({
-    name:{
+const texthomeSchema = mongoose.Schema({
+    name: {
         type: String,
         required: true
     },
-    title:{
+    title: {
         type: String,
         required: true
     },
-    text:{
+    text: {
         type: String,
         required: true
     },
 });
 
-export default mongoose.model('Texthome', Texthome);
+const Texthome = mongoose.model('Texthome', texthomeSchema);
+
+const imageSchema = mongoose.Schema({
+    path: { 
+        type: String, 
+        required: true 
+    },
+    filename: { 
+        type: String, 
+        required: true 
+    },
+});
+
+const ImageModel = mongoose.model("images", imageSchema);
+
+export { Texthome, ImageModel };
